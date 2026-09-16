@@ -18,7 +18,7 @@ export default function DocumentUpload({ fetchDocumentApi }) {
         allowedFileTypes: [".txt", ".pdf", ".docx"],
       },
     }).use(XHRUpload, {
-      endpoint: "http://localhost:3000/upload",
+      endpoint: `${import.meta.env.VITE_API_URL}/upload`,
       fieldName: "document",
     }),
   );
